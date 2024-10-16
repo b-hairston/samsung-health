@@ -1,0 +1,3 @@
+name: samsung-health
+dependencies:
+  - python=3.10
