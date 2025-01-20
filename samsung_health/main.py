@@ -18,7 +18,7 @@ async  def main():
             "model": Exercise
         }
     }
-    breakpoint()
+  
     await write_db(conn,validated_ex_df, table_config, 'exercises' )
    
 

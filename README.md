@@ -1,16 +1,16 @@
 # samsung-health
 
 #### Components
-- Python + Prefect (ETL)
-- Postgres (DB)
-- DBT (Optional)
-- Metabase (BI)
+- Python + Prefect (ETL) [In Progress 1/19/25]
+- Postgres (DB) [Local Testing Complete 1/19/25]
+- ~~DBT (Optional)~~
+- Metabase (BI) [In Progress 1/19/25]
 
 #### Data Requirements
 
 Available Data:
 - Step Data
-- Exercise Data
+- Exercise Data - [Complete 1/19/25]
 - Sleep Data
 - Heart Rate Data
 - Calorie Burn Data 

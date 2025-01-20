@@ -46,7 +46,7 @@ def generate_table_sql(model: BaseModel, df: pl.DataFrame, table_name: str, prim
     :param primary_key: The column to be used as the primary key (default is 'id')
     :return: SQL CREATE TABLE statement
     """
-    breakpoint()
+  
 
     columns = []
     # Iterate over the fields in the Pydantic model
@@ -88,7 +88,7 @@ def generate_table_sql(model: BaseModel, df: pl.DataFrame, table_name: str, prim
     );
     """
 
-    breakpoint()
+  
     return create_table_query
 
 
@@ -156,7 +156,7 @@ async def write_db(connection, df: pl.DataFrame, table_config: dict, table_key: 
     model = config.get("model")
 
     # Ensure the table exists before inserting data
-    # create_table(model, df, table_key, primary_key)
+    create_table(model, df, table_key, primary_key)
 
     # Convert Polars DataFrame to a list of tuples (suitable for insertion)
     records = df.to_numpy().tolist()
@@ -174,7 +174,7 @@ async def write_db(connection, df: pl.DataFrame, table_config: dict, table_key: 
         INSERT ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(columns))});
     """
 
-    breakpoint()
+   
     try:
         with connection.cursor() as cursor:
             for record in records:
