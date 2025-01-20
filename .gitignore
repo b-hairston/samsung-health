@@ -1,3 +1,5 @@
 __pycache__/
 samsung_health/data/
 .env
+*.csv
+samsung_health/*.csv
